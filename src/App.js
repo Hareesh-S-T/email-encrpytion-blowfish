@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { Button, Input } from 'antd';
 
 function App() {
+  const [PT, setPT] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='InputGroup'>
+        <Input.TextArea className='Input' placeholder='Enter Plain-Text' rows={15} value={PT} onChange={e => { setPT(e.target.value) }} />
+        <Button type="danger" ghost className='Encrypt'>Encrypt</Button>
+      </div>
+
+      {/* <p1>{PT}</p1> */}
+
+      <div className='InputGroup'>
+        <Input.TextArea className='Input' placeholder='Enter Cipher-Text' rows={15} />
+        <Button type="secondary" ghost className='Decrypt'>Decrypt</Button>
+      </div>
     </div>
+
   );
 }
 
