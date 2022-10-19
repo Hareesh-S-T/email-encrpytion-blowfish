@@ -6,29 +6,57 @@
   width: 100%;
   background-color: rgb(32, 32, 32);
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 0 1.25%;
 }
 
 .InputGroup {
+  display: flex;
+  width: 100%;
+  margin: 1% 0%;
+  flex-direction: row;
+  align-items: center;
   /* background-color: white; */
+}
+
+.InputSubGroup {
   display: flex;
   width: 50%;
-  height: 50%;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .Input {
   margin-bottom: 5%;
   width: 95%;
-  background-color: rgb(78, 78, 78);
   color: white;
 }
 
-button {
+.HashInput {
   width: 10%;
+  height: 5%;
+  color: white;
+  /* background-color: rgb(78, 78, 78); */
+  /* display: block; */
 }
+
+button {
+  width: 15%;
+}
+
+.Decrypt {
+  border-color: rgb(216, 216, 216) !important;
+  color: rgb(216, 216, 216) !important;
+}
+
+.Decrypt:hover {
+  border-color: rgb(131, 131, 131) !important;
+  color: rgb(131, 131, 131) !important;
+}
+
 
 /* .Input:hover {
   border-color: white !important;
